@@ -10,16 +10,16 @@ const session = require('express-session')
 //database
 require('./src/DataBase')
 //settings handlebars
-app.set('views', path.join(__dirname, 'views'))
+// app.set('views', path.join(__dirname, 'views'))
 
-app.engine('.hbs', hbs({
-    defaultLayout: 'main',
-    layoutsDir:path.join(app.get('views'),'layouts'),
-    partialsDir:path.join(app.get('views'),'partials'),
-    extname: '.hbs'
-}))
+// app.engine('.hbs', hbs({
+//     defaultLayout: 'main',
+//     layoutsDir:path.join(app.get('views'),'layouts'),
+//     partialsDir:path.join(app.get('views'),'partials'),
+//     extname: '.hbs'
+// }))
 
-app.set('view engine', '.hbs')
+// app.set('view engine', '.hbs')
 //middlewares
 app.use(morgan('dev'))
 app.use(express.json())
@@ -32,6 +32,8 @@ app.use(session({
 app.use(router)
 
 
-app.listen(3000, ()=> console.log('Server running in port 3000'));
+app.listen(3000, ()=> 
+res.writeHead(200, { 'Content-Type': 'text/plain' }),
+console.log('Server running in port 3000'));
 
 //app.listen(3000, () => console.log('Server running in port 3000'));

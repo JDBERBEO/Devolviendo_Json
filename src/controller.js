@@ -1,8 +1,12 @@
 const Product = require('./Product')
 
 const getProducts = async(req,res) => {
-    const products = await Product.find().lean();
-    res.send(JSON.stringify(products))
+    let products = await Product.find().lean();
+    products = JSON.stringify(products)
+
+
+
+    res.send(products)
 }
 
 
