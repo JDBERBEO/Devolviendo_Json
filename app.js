@@ -21,13 +21,13 @@ require('./src/DataBase')
 
 // app.set('view engine', '.hbs')
 //middlewares
-app.use(morgan('dev'))
-app.use(express.json())
-app.use(express.urlencoded({extended:true}))
-app.use(session({
-    secret: 'secretWord', //palabra secreta 
-    cookie: { maxAge: 10000*60   } //tiempo que dura la sesión abieta
-  }))
+// app.use(morgan('dev'))
+// app.use(express.json())
+// app.use(express.urlencoded({extended:true}))
+// app.use(session({
+//     secret: 'secretWord', //palabra secreta 
+//     cookie: { maxAge: 10000*60   } //tiempo que dura la sesión abieta
+//   }))
 //Route and Controllers
 app.use(router)
 
