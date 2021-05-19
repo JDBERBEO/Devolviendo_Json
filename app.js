@@ -32,8 +32,6 @@ app.use(session({
 app.use(router)
 
 
-app.listen(3000, ()=> 
-res.writeHead(200, { 'Content-Type': 'text/plain' }),
-console.log('Server running in port 3000'));
+app.listen(3000, ()=> console.log('Server running in port 3000'));
 
 //app.listen(3000, () => console.log('Server running in port 3000'));
